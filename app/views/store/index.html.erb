@@ -3,6 +3,7 @@
 <% end %>
 
 <h1>Your Pragmatic Catalog</h1>
+<h2><%= 'counter: ' + session[:counter].to_s unless session[:counter] < 5 %></h1>
 
 <% @products.each do |product| %>
   <div class="entry">
