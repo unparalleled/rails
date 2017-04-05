@@ -3,6 +3,8 @@ require 'test_helper'
 class CartsControllerTest < ActionController::TestCase
   setup do
     @cart = carts(:one)
+    @java = products(:java)
+    @go = products(:go)
   end
 
   test "should get index" do
@@ -47,4 +49,12 @@ class CartsControllerTest < ActionController::TestCase
 
     assert_redirected_to store_path
   end
+
+  test "add unique products" do
+    @cart.add_product(@go)
+    @cart.add_product(@java)
+
+    assert_equal(2, @cart.line_items.size)
+  end
+
 end

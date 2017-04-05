@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(:version => 20170404224911) do
   create_table "line_items", :force => true do |t|
     t.integer  "product_id"
     t.integer  "cart_id"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
-    t.integer  "quantity",      :default => 1
-    t.integer  "product_price", :default => 0
+    t.datetime "created_at",                                                 :null => false
+    t.datetime "updated_at",                                                 :null => false
+    t.integer  "quantity",                                    :default => 1
+    t.decimal  "product_price", :precision => 8, :scale => 2
   end
 
   create_table "products", :force => true do |t|
