@@ -1,16 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  title: MyString
-  description: MyText
-  image_url: MyString
+java:
+  title: Java
+  description: learn java
+  image_url: java.jpg
   price: 9.99
 
-two:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
+go:
+  title: Go
+  description: learn go
+  image_url: go.webp
+  price: 0.99
 
 ruby:
   title: Programming Ruby 1.9 
