@@ -51,10 +51,17 @@ class CartsControllerTest < ActionController::TestCase
   end
 
   test "add unique products" do
-    @cart.add_product(@go)
-    @cart.add_product(@java)
+    @cart.add_product(@go.id)
+    @cart.add_product(@java.id)
 
     assert_equal(2, @cart.line_items.size)
+  end
+
+  test "add same products" do
+    @cart.add_product(@go.id)
+    @cart.add_product(@go.id)
+
+    assert_equal(1, @cart.line_items.size)
   end
 
 end
